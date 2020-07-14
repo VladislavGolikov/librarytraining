@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Тишина в библиотеке</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="biblio.css">
+</head>
+<body>
+
+  <h1>
+    Тренируемся создавать библиотеку
+  </h1>
+
+<!----------------- книжная полка --------------------------------------------------------->
+  <div class="bookshelf">
+<!--
+    <div class="existsbook" style="background-image: url(cov1.png)">
+      <div class="aliasbook">просто книга</div>
+      <div class="genrebook">нет жанра</div>
+      <div class="yearbook">1900</div>
+    </div>
+-->
+  </div>
+
+  <div class="bottomforflex">
+<!----------------- конструкор книги --------------------------------------------------------->
+
+    <div class="bookbuilder">
+      <h2>СамИздат</h2>
+      <div class="coverbook"><span>это книга</span></div>
+
+      <input type="range" class="forimage" min="1" max="10" step="1" value="1">
+      <div class="forimage">изменить обложку</div>
+
+      <input type="text" class="aliasnewbook" placeholder="название книги" required="required">
+
+      <input list="genre" class="genrenewbook" placeholder="жанр книги" required="required">
+      <datalist id="genre">
+        <option>приключения</option>
+        <option>фантастика</option>
+        <option>учебное пособие</option>
+        <option>научно-популярный</option>
+      </datalist>
+
+      <input type="text" class="yearnewbook" placeholder="год издания" required="required">
+
+      <button class="createbook">создать книгу</button>
+
+    </div>
+
+<!----------------- выдача книг --------------------------------------------------------->
+
+    <div class="bookextradition">
+      <h2>Выдача книг</h2>
+
+      <select class="selectforalias">
+        <option>Название</option>
+      </select>
+
+      <select class="selectforgenre">
+        <option>Жанр</option>
+      </select>
+      <button class="clipbygenre notorder">
+        жанр
+      </button>
+
+
+      <select class="selectforyear">
+        <option>Год издания</option>
+      </select>
+      <button class="clipbyyear notorder">
+        год
+      </button>
+
+      <input type="text" name="poisk" class="searchbook" placeholder="Произвольный поиск...">
+
+      <button class="givebook">получить книгу</button>
+    </div>
+
+<!----------------- мои книги --------------------------------------------------------->
+
+    <div class="myaction">
+      <h2>мои книги</h2>
+      <select class="mybook" size="10">
+        <option>ничего нет</option>
+        <option class="available">сдать можно</option>
+        <option class="notavailable">сдать нельзя</option>
+      </select>
+
+      <button class="damagebook">порвать книгу</button>
+      <button class="gluebook">склеить книгу</button>
+      <button class="returnbook">сдать книгу</button>
+    </div>
+  </div>
+
+<script src="biblio.js"></script>
+</body>
+</html>
+
